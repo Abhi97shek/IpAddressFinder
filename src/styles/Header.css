@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+}
+header
+{
+    background-image: url('/src/assets/images/pattern-bg.png');
+    height: 35vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+
+.leaflet-container
+{
+    height: 65vh;
+    z-index: -1;
+  
+}
+.header_details
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    
+}
+.heading
+{
+    margin-top: 0;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+.input_box
+{
+    width: 34%;
+    display: flex;
+    justify-content: center;
+}
+.input_ip
+{
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    flex-basis: 90%;
+    height: 4rem;
+    font-family: 'Rubik', sans-serif;
+    outline: none;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+.arrow_logo{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 10%;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.location_info{
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top:36%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.location_info
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+.ip_address
+{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+ 
+}
+.location{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+
+}
+.timezone{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+  
+}
+.isp{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    
+}
+.location_info p
+{
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: .7rem;
+    letter-spacing: 2px;
+    color:  hsl(0, 0%, 59%);
+}
+
+.location_info h2
+{
+    font-family: 'Rubik', sans-serif;
+    display: block;
+    font-size: 1.5rem;
+  
+}
+
+.right-border
+{
+    border-right: 2px solid hsl(0, 0%, 59%);
+}
