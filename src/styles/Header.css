@@ -58,7 +58,6 @@ header
     font-size: 1.2rem;
     padding-left: 1rem;
 }
-
 .arrow_logo{
     background-color: black;
     display: flex;
@@ -70,69 +69,135 @@ header
     border-bottom-right-radius: 20px;
 }
 
-.location_info{
-    width: 60%;
+.location_info
+{
     background-color: white;
-    position: absolute;
-    top:36%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     z-index: 10;
-    border-radius: 20px;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    padding:0.2rem 2rem;
+    border-radius: 15px;
+    width: 70%;
  
+}
+.location_info p
+{
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: gray;
+    font-size: 12px;
 }
 
 .ip_address
 {
     flex:1;
-    display: flex;
-    flex-direction: column;
- 
+    padding-top: 1rem;
 }
-.location{
+.location
+{
     flex:1;
-    display: flex;
-    flex-direction: column;
+    padding-top: 1rem;
+}
+.timezone
+{
+    flex:1;
+    padding-top: 1rem;
+}
 
-}
-.timezone{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-  
-}
 .isp{
     flex:1;
-    display: flex;
-    flex-direction: column;
-    
+    padding-top: 1rem;
 }
-.location_info p
-{
-    text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    font-size: .7rem;
-    letter-spacing: 2px;
-    flex:.5;
-    color:  hsl(0, 0%, 59%);
-}
-.test
-{
-    flex:1;
-}
-.location_info h2
-{
-    font-family: 'Rubik', sans-serif;
-    display: block;
-    font-size: 1.5rem;
-  
+.leaflet-div-icon {
+    background: transparent !important;
+    border: none !important;
 }
 
-.right-border
-{
-    border-right: 2px solid hsl(0, 0%, 59%);
+@media only screen and (max-width:375px){
+    .header_details
+    {
+        padding-top: 1rem;
+    }
+    .heading
+    {
+        font-size: 1.5rem;
+    }
+    .location_info{
+        /* display: none; */
+        display: flex;
+        top: 41%;
+        transform: translate(-50%,-43%);
+        flex-direction: column;
+        width: 71%;
+        align-items: center;
+    }
+    .input_box
+    {
+       width: 90%;
+       
+      
+    }
+    .leaflet-div-icon
+    {
+        font-size: 1rem;
+    }
+    .input_ip{
+       flex-basis: 75%;
+       border-top-left-radius: 15px;
+       height: 3.5rem;
+        border-bottom-left-radius: 15px;
+        font-size: 1rem;
+       
+    }
+    
+    .location_info p
+    {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .location_info h2
+    {
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .ip_address
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .location{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timezone
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .isp
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+    .isp h2
+    {
+        text-align: center;
+    }
+    .arrow_logo
+    {
+      flex-basis: 18%;
+      border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
 }

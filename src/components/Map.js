@@ -1,6 +1,8 @@
 import React, { useEffect,useState } from 'react';
 import { MapContainer, TileLayer, Marker,Popup} from 'react-leaflet';
+
 import '../styles/Header.css';
+import {iconPerson} from './Icons';
 const Map = ({location}) => {
 
     const [lat,setLat] =useState('');
@@ -27,7 +29,7 @@ const Map = ({location}) => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[32.2251866,75.6604847]}>
+      <Marker position={[32.2251866,75.6604847]} icon={iconPerson}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
