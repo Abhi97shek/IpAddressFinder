@@ -8,9 +8,9 @@ const Info = ({ipAddress,location,timezone,isp}) => {
         <div className="location_info">
         <div className="ip_address">
             <p>Ip Address</p>
-         
+         <div className="test">
             <h2>{ipAddress}</h2>
-           
+            </div>           
         </div>
         <div className="location">
             <p>Location</p>

@@ -15,11 +15,14 @@ header
     background-repeat: no-repeat;
   
 }
-
+#map
+{
+    z-index: -1;
+}
 .leaflet-container
 {
     height: 65vh;
-    z-index: -1;
+    z-index: 1;
   
 }
 .header_details
@@ -68,24 +71,20 @@ header
 }
 
 .location_info{
-    width: 80%;
+    width: 60%;
     background-color: white;
     position: absolute;
     top:36%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 2;
+    z-index: 10;
     border-radius: 20px;
-}
-
-.location_info
-{
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
-    box-sizing: border-box;
-
+    padding: 1rem;
+ 
 }
+
 .ip_address
 {
     flex:1;
@@ -118,9 +117,13 @@ header
     font-weight: 500;
     font-size: .7rem;
     letter-spacing: 2px;
+    flex:.5;
     color:  hsl(0, 0%, 59%);
 }
-
+.test
+{
+    flex:1;
+}
 .location_info h2
 {
     font-family: 'Rubik', sans-serif;

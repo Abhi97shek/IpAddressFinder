@@ -31,7 +31,7 @@ const Header = () => {
 
        </header>
         <Info ipAddress={ipAddresss} isp={isp} timezone={timezone} location={location}/>
-        <Map />
+        <Map location={location}/>
       </>
     )
 }
