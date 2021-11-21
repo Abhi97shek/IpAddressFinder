@@ -7,29 +7,28 @@ const Map = ({location}) => {
 
     const [lat,setLat] =useState('');
     const [long,setLong] = useState('');
+      useEffect(()=>{
 
-    useEffect(()=>{
+          if('geolocation' in navigator)
+          {
+            navigator.geolocation.getCurrentPosition(position=>{
+              const lat = position.coords.latitude;
+              const long =position.coords.longitude;
 
-
-      const fetchGeoAPI  = async ()=>{
-
-          const response = await fetch(`https://open.mapquestapi.com/geocoding/v1/address?key=13F72J9e8hanAzeqSTCvTfatASFbjShg&location=${location}`);
-          const data = await response.json();
-          
-          
-      };
-   
-      fetchGeoAPI();
-    },[location]);
+              setLat(lat);
+              setLong(long);
+            });
+          }
+      },[]);
 
     return (
       <div id="map">
-      <MapContainer center={[32.2251866,75.6604847]} zoom={13} scrollWheelZoom={true}>
+      <MapContainer center={[lat,long]} zoom={13} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[32.2251866,75.6604847]} icon={iconPerson}>
+      <Marker position={[lat,long]} icon={iconPerson}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>

@@ -17,11 +17,11 @@ const useIpFetcher = (entIpAddress) => {
           const fetchAPI = async ()=>{
             const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_v3Duu8Gj4sFNM9QbTD4hdDqohHkNv&ipAddress=${entIpAddress}`);
             const data = await response.json();
-
+         
             setInfo({
                 ipAddresss:data.ip,
-                location: `${data.location.country}, ${data.location.region}`,
-                timezone: data.location.timezone,
+                location: `${data.location.region}, ${data.location.country}`,
+                timezone: `${data.location.country} ${data.location.timezone}`,
                 isp:data.isp
             });
           };
